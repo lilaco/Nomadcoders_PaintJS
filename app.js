@@ -1,6 +1,8 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 
+canvas.width = 700;
+canvas.height = 700;
 ctx.strokeStyle = "#2c2c2c";
 ctx.lineWidth = 2.5;
 
@@ -20,7 +22,7 @@ function onMouseMove(event){
         ctx.beginPath();
         ctx.moveTo(x, y);
     } else {
-        ctx.lineTo(x, y);
+        ctx.lineTo(x, y); //마우스를 움직이는 내내 발생한다.
         ctx.stroke();
     }
 }
